@@ -124,7 +124,7 @@ public partial class UC_Student : UserControl
         if (btn is null)
             return;
 
-        if (btn.Tag?.ToString() == "Cancel")
+        if (btn.Tag?.ToString() == "Cancel" || txt_comment.Text.Length == 0)
         {
             ChangeVisibilty();
             return;
