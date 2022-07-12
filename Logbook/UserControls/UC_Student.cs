@@ -143,9 +143,21 @@ public partial class UC_Student : UserControl
 
 
         if (height != 20)
-            this.Height += height;
+        {
+            Height += height;
+
+            var form = (Parent.Parent as Form);
+
+            if (form is not null)
+            {
+                var size = form.AutoScrollMinSize;
+                form.AutoScrollMinSize = new Size(size.Width, size.Height + height);
+            }
+        }
 
         pnl_responsive_comment.Padding = new Padding(0, 17, 0, 0);
+
+
 
         txt_comment.Enabled = false;
         btn_save.Visible = false;

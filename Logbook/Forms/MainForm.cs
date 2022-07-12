@@ -42,7 +42,7 @@ public partial class MainForm : Form
 
 
 
-    private bool _firstTimeCheckedRadioButton = true;
+    private bool _firstTimeEditAndSaveButton = true;
     private void btn_save_cancel_Click(object sender, EventArgs e)
     {
         var btn = sender as Button;
@@ -62,9 +62,9 @@ public partial class MainForm : Form
         lbl_lesson_subject.Text = tBox_Content.Text;
 
 
-        if (_firstTimeCheckedRadioButton)
+        if (_firstTimeEditAndSaveButton)
         {
-            _firstTimeCheckedRadioButton = false;
+            _firstTimeEditAndSaveButton = false;
             rBtn_cheched_all.Enabled = true;
             btn_add_material.Enabled = true;
 
